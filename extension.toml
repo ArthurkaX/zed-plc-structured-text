@@ -1,0 +1,12 @@
+id = "plc-structured-text"
+name = "PLC Structured Text"
+version = "0.0.3"
+schema_version = 1
+authors = ["ArthurkaX"]
+description = "Structured Text language support for Zed"
+repository = "https://github.com/ArthurkaX/zed-plc-structured-text"
+
+[grammars.structured_text]
+repository = "file:///C:/Workspace/Active/zed-plc-structured-text"
+rev = "main"
+path = "grammars/structured_text"
