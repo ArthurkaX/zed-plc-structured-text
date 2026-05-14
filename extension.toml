@@ -9,4 +9,4 @@ repository = "https://github.com/ArthurkaX/zed-plc-structured-text"
 [grammars.structured_text]
 repository = "file:///C:/Workspace/Active/zed-plc-structured-text"
 rev = "main"
-path = "grammars/structured_text"
+path = "tree-sitter-structured-text"

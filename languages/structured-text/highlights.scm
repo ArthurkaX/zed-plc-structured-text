@@ -10,13 +10,13 @@
   functionName: (identifier) @title)
 
 (function_definition
-  "END_FUNCTION" @keyword.control)
+  "END_FUNCTION" @keyword)
 
 (function_block_definition
   functionBlockName: (_) @title)
 
 (function_block_definition
-  "END_FUNCTION_BLOCK" @keyword.control)
+  "END_FUNCTION_BLOCK" @keyword)
 
 (function_block_definition
   baseType: (_) @type)

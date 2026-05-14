@@ -6,7 +6,7 @@
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
-#define LANGUAGE_VERSION 14
+#define LANGUAGE_VERSION 15
 #define STATE_COUNT 379
 #define LARGE_STATE_COUNT 2
 #define SYMBOL_COUNT 191
@@ -17,7 +17,7 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 9
 #define MAX_RESERVED_WORD_SET_SIZE 0
 #define PRODUCTION_ID_COUNT 41
-#define SUPERTYPE_COUNT 0
+#define SUPERTYPE_COUNT 6
 
 enum ts_symbol_identifiers {
   sym_identifier = 1,
@@ -1981,6 +1981,70 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [376] = 376,
   [377] = 377,
   [378] = 378,
+};
+
+static const TSSymbol ts_supertype_symbols[SUPERTYPE_COUNT] = {
+  sym__control_statement,
+  sym__definition,
+  sym__expression,
+  sym__literal,
+  sym__loop_statement,
+  sym_statement,
+};
+
+static const TSMapSlice ts_supertype_map_slices[] = {
+  [sym__control_statement] = {.index = 0, .length = 2},
+  [sym__definition] = {.index = 2, .length = 5},
+  [sym__expression] = {.index = 7, .length = 7},
+  [sym__literal] = {.index = 14, .length = 12},
+  [sym__loop_statement] = {.index = 26, .length = 3},
+  [sym_statement] = {.index = 29, .length = 8},
+};
+
+static const TSSymbol ts_supertype_map_entries[] = {
+  [0] =
+    sym_case_statement,
+    sym_if_statement,
+  [2] =
+    sym_action_definition,
+    sym_function_block_definition,
+    sym_function_definition,
+    sym_program_definition,
+    sym_type_definition,
+  [7] =
+    sym__literal,
+    sym_binary_expression,
+    sym_call_expression,
+    sym_mask_expression,
+    sym_parenthesis_expression,
+    sym_unary_expression,
+    sym_variable,
+  [14] =
+    sym_binary,
+    sym_boolean,
+    sym_date,
+    sym_date_and_time,
+    sym_floating_point,
+    sym_hexidecimal,
+    sym_integer,
+    sym_octal,
+    sym_string,
+    sym_time,
+    sym_time_of_day,
+    sym_wstring,
+  [26] =
+    sym_for_statement,
+    sym_repeat_statement,
+    sym_while_statement,
+  [29] =
+    sym__control_statement,
+    sym__loop_statement,
+    sym_assignment,
+    sym_call_statement,
+    sym_continue_statement,
+    sym_exit_statement,
+    sym_expression_statement,
+    sym_return_statement,
 };
 
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
@@ -4127,7 +4191,7 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
   }
 }
 
-static const TSLexMode ts_lex_modes[STATE_COUNT] = {
+static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [0] = {.lex_state = 0},
   [1] = {.lex_state = 0},
   [2] = {.lex_state = 0},
@@ -15110,6 +15174,7 @@ TS_PUBLIC const TSLanguage *tree_sitter_structured_text(void) {
     .state_count = STATE_COUNT,
     .large_state_count = LARGE_STATE_COUNT,
     .production_id_count = PRODUCTION_ID_COUNT,
+    .supertype_count = SUPERTYPE_COUNT,
     .field_count = FIELD_COUNT,
     .max_alias_sequence_length = MAX_ALIAS_SEQUENCE_LENGTH,
     .parse_table = &ts_parse_table[0][0],
@@ -15120,6 +15185,9 @@ TS_PUBLIC const TSLanguage *tree_sitter_structured_text(void) {
     .field_names = ts_field_names,
     .field_map_slices = ts_field_map_slices,
     .field_map_entries = ts_field_map_entries,
+    .supertype_map_slices = ts_supertype_map_slices,
+    .supertype_map_entries = ts_supertype_map_entries,
+    .supertype_symbols = ts_supertype_symbols,
     .symbol_metadata = ts_symbol_metadata,
     .public_symbol_map = ts_symbol_map,
     .alias_map = ts_non_terminal_alias_map,
@@ -15129,6 +15197,13 @@ TS_PUBLIC const TSLanguage *tree_sitter_structured_text(void) {
     .keyword_lex_fn = ts_lex_keywords,
     .keyword_capture_token = sym_identifier,
     .primary_state_ids = ts_primary_state_ids,
+    .name = "structured_text",
+    .max_reserved_word_set_size = 0,
+    .metadata = {
+      .major_version = 0,
+      .minor_version = 0,
+      .patch_version = 1,
+    },
   };
   return &language;
 }

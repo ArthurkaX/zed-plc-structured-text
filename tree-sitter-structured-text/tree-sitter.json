@@ -1,0 +1,38 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "structured_text",
+      "camelcase": "StructuredText",
+      "title": "Structured Text",
+      "scope": "source.structured-text",
+      "file-types": [
+        "st",
+        "iecst"
+      ],
+      "injection-regex": "^(structured[-_ ]?text|iecst|st)$"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "IEC 61131-3 Structured Text tree-sitter grammar",
+    "authors": [
+      {
+        "name": "Tyler Matijevich"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tmatijevich/tree-sitter-structured-text"
+    }
+  },
+  "bindings": {
+    "c": false,
+    "go": false,
+    "node": false,
+    "python": false,
+    "rust": false,
+    "swift": false,
+    "zig": false
+  }
+}
