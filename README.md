@@ -32,15 +32,16 @@ Siemens SCL may look similar to Structured Text, but it has vendor-specific synt
 
 ## Grammar
 
-The Zed extension uses a separate Tree-sitter grammar repository.
+The Zed extension uses a separate Tree-sitter grammar repository:
 
-For local development, `extension.toml` currently points to a local grammar repo:
+https://github.com/ArthurkaX/tree-sitter-structured-text
+
+The grammar is pinned in `extension.toml`:
 
 ```toml
-repository = "file:///C:/Workspace/Active/tree-sitter-structured-text"
+repository = "https://github.com/ArthurkaX/tree-sitter-structured-text.git"
+rev = "f5dfc65b0d12cb1e20e5499c1f34846d18167f1c"
 ```
-
-Before publishing to the Zed Extension Store, replace this with a public HTTPS grammar repository and pin a commit SHA.
 
 ## Local Development
 
