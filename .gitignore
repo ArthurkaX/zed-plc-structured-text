@@ -4,6 +4,7 @@ target/
 node_modules/
 *.wasm
 *.dll
+grammars/
 examples/
 parser.exp
 parser.lib
