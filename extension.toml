@@ -1,6 +1,6 @@
 id = "plc-structured-text"
 name = "PLC Structured Text"
-version = "0.0.5"
+version = "0.0.6"
 schema_version = 1
 authors = ["Artur Khalikov <arthurka.x.r@gmail.com>"]
 description = "Structured Text Zed extension"
