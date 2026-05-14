@@ -43,13 +43,20 @@ repository = "https://github.com/ArthurkaX/tree-sitter-structured-text.git"
 rev = "f5dfc65b0d12cb1e20e5499c1f34846d18167f1c"
 ```
 
+## Local Installation
+
+Until the extension is available in the Zed Extension Store, it can be installed as a dev extension:
+
+1. Clone this repository.
+2. Open Zed.
+3. Run `zed: install dev extension` from the command palette.
+4. Select the cloned `zed-plc-structured-text` directory.
+
+The extension provides syntax highlighting for `.st` and `.iecst` files.
+
+After the extension is published in the Zed Extension Store, this section can be replaced with the regular store installation instructions.
+
 ## Local Development
-
-Install this repository as a dev extension in Zed:
-
-1. Open the command palette.
-2. Run `zed: install dev extension`.
-3. Select this repository directory.
 
 If the grammar was rebuilt or the grammar repository changed, run `Rebuild` from the Zed extensions UI or reinstall the dev extension.
 
