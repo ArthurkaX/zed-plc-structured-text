@@ -53,6 +53,10 @@ Install this repository as a dev extension in Zed:
 
 If the grammar was rebuilt or the grammar repository changed, run `Rebuild` from the Zed extensions UI or reinstall the dev extension.
 
+## Related Project
+
+This extension was created alongside [`cds-text-sync`](https://github.com/ArthurkaX/cds-text-sync), a CODESYS-oriented text synchronization tool for PLC projects.
+
 ## License
 
 MIT
