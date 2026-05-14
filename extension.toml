@@ -3,8 +3,9 @@ name = "PLC Structured Text"
 version = "0.0.3"
 schema_version = 1
 authors = ["ArthurkaX"]
-description = "Structured Text language support for Zed"
+description = "IEC 61131-3 Structured Text support for Zed, focused on CODESYS-style PLC projects"
 repository = "https://github.com/ArthurkaX/zed-plc-structured-text"
+languages = ["languages/structured-text"]
 
 [grammars.structured_text]
 repository = "file:///C:/Workspace/Active/tree-sitter-structured-text"
