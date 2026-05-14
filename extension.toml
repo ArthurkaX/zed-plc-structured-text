@@ -8,4 +8,4 @@ repository = "https://github.com/ArthurkaX/zed-plc-structured-text"
 
 [grammars.structured_text]
 repository = "file:///C:/Workspace/Active/tree-sitter-structured-text"
-rev = "fd123a548ed7bb4d09f2f0f7aba1734ce98eaa16"
+rev = "e01eab6de143d64aa6924ca083f3c41079ab26f9"
