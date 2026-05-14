@@ -21,6 +21,12 @@
 (function_block_definition
   baseType: (_) @type)
 
+(continue_statement
+  "CONTINUE" @keyword)
+
+(exit_statement
+  "EXIT" @keyword)
+
 (type_definition
   typeName: (identifier) @type)
 
