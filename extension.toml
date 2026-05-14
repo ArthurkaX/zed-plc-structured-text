@@ -8,5 +8,5 @@ repository = "https://github.com/ArthurkaX/zed-plc-structured-text"
 languages = ["languages/structured-text"]
 
 [grammars.structured_text]
-repository = "file:///C:/Workspace/Active/tree-sitter-structured-text"
+repository = "https://github.com/ArthurkaX/tree-sitter-structured-text.git"
 rev = "e01eab6de143d64aa6924ca083f3c41079ab26f9"
