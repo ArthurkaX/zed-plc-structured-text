@@ -11,7 +11,15 @@ Structured Text language support for Zed.
 
 ## Grammar
 
-This extension uses the MIT-licensed [`tree-sitter-structured-text`](https://github.com/tmatijevich/tree-sitter-structured-text) grammar.
+This extension uses a separate Tree-sitter grammar repository.
+
+For local development, `extension.toml` points to:
+
+```toml
+repository = "file:///C:/Workspace/Active/tree-sitter-structured-text"
+```
+
+Before publishing to the Zed Extension Store, replace this with a public HTTPS grammar repository and pin a commit SHA.
 
 ## Local Development
 

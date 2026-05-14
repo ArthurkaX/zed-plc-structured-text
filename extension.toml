@@ -7,6 +7,5 @@ description = "Structured Text language support for Zed"
 repository = "https://github.com/ArthurkaX/zed-plc-structured-text"
 
 [grammars.structured_text]
-repository = "file:///C:/Workspace/Active/zed-plc-structured-text"
-rev = "main"
-path = "tree-sitter-structured-text"
+repository = "file:///C:/Workspace/Active/tree-sitter-structured-text"
+rev = "fd123a548ed7bb4d09f2f0f7aba1734ce98eaa16"
